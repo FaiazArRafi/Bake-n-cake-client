@@ -19,8 +19,6 @@ const SignUp = () => {
 
         createUser(email, password)
             .then(result => {
-                const user = result.user;
-                console.log(user);
                 setError('')
                 form.reset();
             })
@@ -34,8 +32,8 @@ const SignUp = () => {
 
         <div className='w-2/5 border-4 rounded-2xl p-5 mt-4 mx-auto'>
             <form onSubmit={handleSignUp} className="flex flex-col gap-4 ">
+                <h1 className='text-4xl text-center font-semibold py-2'>Sign Up</h1>
                 <div>
-                    <h1 className='text-4xl text-center font-semibold py-2'>Sign Up</h1>
                     <div className="mb-2 block">
                         <Label
                             htmlFor="name1"
