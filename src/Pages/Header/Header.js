@@ -22,7 +22,7 @@ const Header = () => {
                     <Button href='/login'>
                         Login
                     </Button>
-                    <Button>
+                    <Button href='/signup'>
                         Sign Up
                     </Button>
                     <Navbar.Toggle />
