@@ -1,5 +1,6 @@
 import { Carousel } from 'flowbite-react';
 import React from 'react';
+import AllServices from '../Services/AllServices';
 
 const Home = () => {
     return (
@@ -31,6 +32,7 @@ const Home = () => {
                     </Carousel>
                 </div>
             </div>
+
 
         </div>
     );
