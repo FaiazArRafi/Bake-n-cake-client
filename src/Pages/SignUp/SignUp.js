@@ -1,6 +1,6 @@
 import { Button, Checkbox, Label, TextInput } from 'flowbite-react';
-import { Input } from 'postcss';
 import React, { useContext, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider';
 
 const SignUp = () => {
@@ -22,9 +22,9 @@ const SignUp = () => {
                 setError('')
                 form.reset();
             })
-            .catch(e => {
-                console.error(e)
-                setError(e.message)
+            .catch(error => {
+                console.error(error)
+                setError(error.message)
             });
     }
 
@@ -110,6 +110,9 @@ const SignUp = () => {
                 <Button type="submit" gradientDuoTone="purpleToBlue" className='w-1/2 mx-auto text-2xl'>
                     <h1 className='text-lg'>Sign Up</h1>
                 </Button>
+                <div>
+                    <p>Already have an account ? <Link to='/login' className="text-blue-600 hover:underline dark:text-blue-500 font-semibold">Login</Link> </p>
+                </div>
             </form>
         </div>
     );

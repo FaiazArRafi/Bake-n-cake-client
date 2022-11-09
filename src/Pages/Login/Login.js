@@ -1,7 +1,9 @@
-import { Button, Checkbox, Label, TextInput } from 'flowbite-react';
+import { GoogleAuthProvider } from 'firebase/auth';
+import { Button, Label, TextInput } from 'flowbite-react';
 import React, { useContext, useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider';
+import { FcGoogle } from "react-icons/fc";
 
 const Login = () => {
     const [error, setError] = useState('');
@@ -11,6 +13,16 @@ const Login = () => {
     const location = useLocation();
 
     const from = location.state?.from?.pathname || '/';
+
+    const googleProvider = new GoogleAuthProvider();
+
+    const handleGoogleSignIn = () => {
+        providerLogin(googleProvider)
+            .then(result => {
+                navigate(from, { replace: true });
+            })
+            .catch(error => console.error(error))
+    }
 
     const handleLogin = (event) => {
         event.preventDefault();
@@ -35,8 +47,11 @@ const Login = () => {
 
     return (
         <div className='w-2/5 border-4 rounded-2xl p-5 mt-4 mx-auto'>
+            <h1 className='text-4xl text-center font-semibold py-2'>Login</h1>
+            <div>
+                <Button onClick={handleGoogleSignIn} className='my-2 mx-auto ' color="light"><span className='text-3xl pr-2'><FcGoogle /> </span> <h1 className='text-lg'>Login with Google</h1></Button>
+            </div>
             <form onSubmit={handleLogin} className="flex flex-col gap-4 ">
-                <h1 className='text-4xl text-center font-semibold py-2'>Login</h1>
                 <div>
                     <div className="mb-2 block">
                         <Label
@@ -73,6 +88,9 @@ const Login = () => {
                 <Button type="submit" gradientDuoTone="purpleToBlue" className='w-1/2 mx-auto text-2xl'>
                     <h1 className='text-lg'>Login</h1>
                 </Button>
+                <div>
+                    <p>Don't have an account ? <Link to='/signup' className="text-blue-600 hover:underline dark:text-blue-500 font-semibold">Sign Up</Link> </p>
+                </div>
             </form>
         </div>
     );
