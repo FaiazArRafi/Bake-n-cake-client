@@ -31,6 +31,7 @@ const Home = () => {
                     </Carousel>
                 </div>
             </div>
+
         </div>
     );
 };
