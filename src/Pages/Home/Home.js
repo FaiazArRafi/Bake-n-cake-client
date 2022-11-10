@@ -1,13 +1,12 @@
 import { Button, Carousel } from 'flowbite-react';
 import React, { useEffect, useState } from 'react';
 import AllServices from '../Services/AllServices';
-import Services from '../Services/Services';
 
 const Home = () => {
     const [services, setServices] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://bake-server.vercel.app/services')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])

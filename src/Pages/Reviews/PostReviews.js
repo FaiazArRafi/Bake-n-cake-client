@@ -24,7 +24,7 @@ const PostReviews = () => {
             message
         }
 
-        fetch('http://localhost:5000/reviews', {
+        fetch('https://bake-server.vercel.app/reviews', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -44,7 +44,7 @@ const PostReviews = () => {
 
     return (
         <div>
-            <div className='my-5 border rounded-lg mx-auto w-2/5 py-2 px-5'>
+            <div className='my-5 border rounded-lg mx-auto py-2 px-8 bg-pink-100'>
                 <h1 className='text-3xl text-center'>Review</h1>
                 <form className='mx-auto' onSubmit={handleReview}>
                     <div>
@@ -57,6 +57,7 @@ const PostReviews = () => {
                         <TextInput
                             id="large"
                             type="text"
+                            className='px-10'
                             sizing="lg"
                             value={title}
                             readOnly
@@ -144,7 +145,7 @@ const PostReviews = () => {
                             rows={4}
                         />
                     </div>
-                    <Button type="submit" className='mx-auto my-2'>
+                    <Button type="submit" gradientDuoTone="purpleToBlue" className='mx-auto my-2'>
                         Submit
                     </Button>
                 </form>

@@ -46,7 +46,7 @@ const Login = () => {
     }
 
     return (
-        <div className='w-2/5 border-4 rounded-2xl p-5 mt-4 mx-auto'>
+        <div className='w-2/5 border-4 rounded-2xl p-5 my-4 mx-auto'>
             <h1 className='text-4xl text-center font-semibold py-2'>Login</h1>
             <div>
                 <Button onClick={handleGoogleSignIn} className='my-2 mx-auto ' color="light"><span className='text-3xl pr-2'><FcGoogle /> </span> <h1 className='text-lg'>Login with Google</h1></Button>

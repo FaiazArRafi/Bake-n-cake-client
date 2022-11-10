@@ -18,7 +18,7 @@ const AddService = () => {
             details
         }
 
-        fetch('http://localhost:5000/services', {
+        fetch('https://bake-server.vercel.app/services', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -99,7 +99,7 @@ const AddService = () => {
                             required={true}
                         />
                     </div>
-                    <Button type="submit" className='mx-auto my-2'>
+                    <Button type="submit" gradientDuoTone="purpleToBlue" className='mx-auto my-2'>
                         Add Service
                     </Button>
                 </form>

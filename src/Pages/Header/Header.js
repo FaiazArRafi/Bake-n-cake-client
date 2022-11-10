@@ -1,6 +1,5 @@
 import { Button, Navbar } from 'flowbite-react';
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider';
 
 const Header = () => {
@@ -17,7 +16,7 @@ const Header = () => {
             <Navbar
                 fluid={true}
                 rounded={true}
-                className='bg-pink-200'
+                className='bg-rose-400 container mx-auto'
             >
                 <Navbar.Brand href="/">
                     <img
@@ -29,44 +28,42 @@ const Header = () => {
                         Bake n Cake
                     </span>
                 </Navbar.Brand>
-                <div className="">
 
-                </div>
                 <div className="flex md:order-2">
                     {
                         user?.uid ?
                             <>
-                                <Navbar.Collapse className=' mt-3 mr-5 pr-5'>
+                                <Navbar.Collapse className='mt-1.5 mr-5 pr-5'>
                                     <Navbar.Link href="/myReviews" className='flex justify-start items-center font-semibold text-lg'>
-                                        My Reviews
+                                        <span className='text-white'>My Reviews</span>
                                     </Navbar.Link>
                                     <Navbar.Link href="/addService" className='font-semibold text-lg'>
-                                        Add Service
+                                        <span className='text-white'>Add Service</span>
                                     </Navbar.Link></Navbar.Collapse>
 
-                                <Button gradientMonochrome="cyan" onClick={handleLogOut}>Log Out</Button>
+                                <Button gradientDuoTone="purpleToPink" onClick={handleLogOut}>Log Out</Button>
                             </>
                             :
                             <>
-                                <Button href='/login' gradientMonochrome="cyan" className='mr-3 p-2 px-2 rounded-3 '>Login</Button>
-                                <Button href='/signup' gradientMonochrome="teal" className='p-2 mr-3 px-2 rounded-3 '>Sign Up</Button>
+                                <Button href='/login' gradientDuoTone="purpleToPink" className='mr-3 p-2 px-2 rounded-3 '>Login</Button>
+                                <Button href='/signup' gradientDuoTone="pinkToOrange" className='p-2 mr-3 px-2 rounded-3 '>Sign Up</Button>
                             </>
                     }
                     <Navbar.Toggle />
                 </div>
                 <Navbar.Collapse>
                     <Navbar.Link
-                        className='font-semibold text-lg'
+                        className='font-semibold text-lg '
                         href="/">
-                        Home
+                        <span className='text-white'>Home</span>
                     </Navbar.Link>
                     <Navbar.Link className='font-semibold text-lg'
                         href="/services">
-                        My Services
+                        <span className='text-white'>My Services</span>
                     </Navbar.Link>
                     <Navbar.Link className='font-semibold text-lg'
                         href="/blog">
-                        Blog
+                        <span className='text-white'>Blog</span>
                     </Navbar.Link>
 
                 </Navbar.Collapse>

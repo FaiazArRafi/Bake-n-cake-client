@@ -2,7 +2,7 @@ import { Button } from 'flowbite-react';
 import React from 'react';
 
 const MyReviewDetails = ({ review, handleDelete, handleStatusUpdate }) => {
-    const { _id, product_id, productName, customer, photo, message, status } = review;
+    const { _id, customer, photo, message } = review;
 
     return (
         <div>

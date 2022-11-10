@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 
 const AllReviews = ({ review }) => {
-    const { product_id, productName, customer, photo, message } = review;
+    const { product_id, customer, photo, message } = review;
 
     const [reviewService, setReviewService] = useState({})
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/services/${product_id}`)
+        fetch(`https://bake-server.vercel.app/services/${product_id}`)
             .then(res => res.json())
             .then(data => setReviewService(data));
     }, [product_id])

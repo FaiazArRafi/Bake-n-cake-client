@@ -39,7 +39,7 @@ export const routes = createBrowserRouter([
             {
                 path: '/services/:id',
                 element: <Details></Details>,
-                loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
+                loader: ({ params }) => fetch(`https://bake-server.vercel.app/services/${params.id}`)
             },
             {
                 path: '/myReviews',
@@ -151,7 +151,7 @@ export const routes = createBrowserRouter([
             <div className='flex flex-col justify-center items-center text-2xl'>
                 <h1>404 Error</h1>
                 <h2>Couldn't launch :(</h2>
-                <h3>Page Not Found - lets take you <a href="https://bake-client.web.app/"><span className="underline underline-offset-1 text-sky-600 font-semibold">BACK</span></a></h3>
+                <h3>Page Not Found - lets take you <a href="https://bake-server.vercel.app/"><span className="underline underline-offset-1 text-sky-600 font-semibold">BACK</span></a></h3>
             </div>
         </body>
         </div>
