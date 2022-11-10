@@ -8,7 +8,8 @@ const PrivateRoute = ({ children }) => {
     const location = useLocation();
 
     if (loading) {
-        return <Spinner color="pink" size="lg" />
+        return <div className="text-center my-8">
+            <Spinner aria-label="Center-aligned spinner example" size="xl" color="pink" /> </div>
     }
 
     if (!user) {

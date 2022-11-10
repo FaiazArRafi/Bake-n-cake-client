@@ -35,6 +35,14 @@ const Header = () => {
                     {
                         user?.uid ?
                             <>
+                                <Navbar.Collapse className=' mt-3 mr-5 pr-5'>
+                                    <Navbar.Link href="/myReviews" className='flex justify-start items-center'>
+                                        My Reviews
+                                    </Navbar.Link>
+                                    <Navbar.Link href="/addService">
+                                        Add Service
+                                    </Navbar.Link></Navbar.Collapse>
+
                                 <Button onClick={handleLogOut}>Log Out</Button>
                             </>
                             :
@@ -56,12 +64,7 @@ const Header = () => {
                     <Navbar.Link href="/blog">
                         Blog
                     </Navbar.Link>
-                    <Navbar.Link href="/myReviews">
-                        My Review
-                    </Navbar.Link>
-                    <Navbar.Link href="/addService">
-                        Add Service
-                    </Navbar.Link>
+
                 </Navbar.Collapse>
             </Navbar>
         </div>

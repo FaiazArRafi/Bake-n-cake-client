@@ -4,10 +4,12 @@ import Blog from "../Pages/Blog/Blog";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
 import MyReviews from "../Pages/Reviews/MyReviews/MyReviews";
+import PostReviews from "../Pages/Reviews/PostReviews";
 import AddService from "../Pages/Services/AddService";
 import Details from "../Pages/Services/Details";
 import Services from "../Pages/Services/Services";
 import SignUp from "../Pages/SignUp/SignUp";
+import PrivateRoute from "./PrivateRoute";
 
 export const routes = createBrowserRouter([
     {
@@ -41,11 +43,15 @@ export const routes = createBrowserRouter([
             },
             {
                 path: '/myReviews',
-                element: <MyReviews></MyReviews>
+                element: <PrivateRoute><MyReviews></MyReviews></PrivateRoute>
             },
             {
                 path: '/addService',
-                element: <AddService></AddService>
+                element: <PrivateRoute><AddService></AddService></PrivateRoute>
+            },
+            {
+                path: '/postReviews',
+                element: <PrivateRoute><PostReviews></PostReviews></PrivateRoute>
             }
 
         ]

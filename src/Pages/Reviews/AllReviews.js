@@ -1,4 +1,3 @@
-import { Table } from 'flowbite-react';
 import React, { useEffect, useState } from 'react';
 
 const AllReviews = ({ review }) => {
@@ -15,7 +14,7 @@ const AllReviews = ({ review }) => {
 
     return (
         <div>
-            <div className='w-1/2 mx-auto border rounded-lg px-3 py-3 bg-amber-100'>
+            <div className='w-1/2 mx-auto border rounded-lg px-3 py-3 bg-amber-100 my-4'>
                 <div className='flex justify-start items-center py-2'>
                     <img src={photo} alt="" className='rounded-full w-9 mr-3' />
                     <h1 className='font-semibold text-orange-500 text-lg'>{customer}</h1>

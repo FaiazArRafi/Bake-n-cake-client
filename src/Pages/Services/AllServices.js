@@ -23,7 +23,7 @@ const AllServices = ({ service }) => {
                     <p className="font-normal text-gray-700 dark:text-gray-400">
                         {details}
                     </p>
-                    <Button href={`/services/${_id}`} gradientDuoTone="purpleToPink" className=' mx-24 py-2 rounded-4'>See Details</Button>
+                    <Button href={`/services/${_id}`} gradientDuoTone="purpleToPink" className=' mx-24 py-2 rounded-4'>View Details</Button>
                 </Card>
             </div>
         </div>
