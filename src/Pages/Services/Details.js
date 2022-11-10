@@ -4,7 +4,6 @@ import { Link, useLoaderData } from 'react-router-dom';
 import PostReviews from '../Reviews/PostReviews';
 import Reviews from '../Reviews/Reviews';
 import { PhotoProvider, PhotoView } from 'react-photo-view'
-import PrivateRoute from '../../Routes/PrivateRoute';
 import { AuthContext } from '../../Context/AuthProvider';
 
 const Details = () => {
@@ -29,6 +28,12 @@ const Details = () => {
                     <p className="font-normal text-gray-700 dark:text-gray-400">
                         {details}
                     </p>
+                    <h1 className='mt-5 '>➤ Customer have to order at least 2 days prior to delivary date.</h1>
+                    <h1>➤ Customer needs to pay half price in advanced and the rest on delivary.</h1>
+                    <h1>➤ Delivary charge 100 tk will be on home delivary.</h1>
+                    <h1>➤ Customers are encouraged to pick up there order by person.</h1>
+                    <h1>➤ Customers can order over phone and email.</h1>
+                    <Button gradientDuoTone="pinkToOrange" className=' mx-24 py-2 rounded-4'><span className='text-xl'>Order Now</span></Button>
                 </Card>
             </div>
 

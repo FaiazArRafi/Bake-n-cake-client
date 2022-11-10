@@ -17,6 +17,7 @@ const Header = () => {
             <Navbar
                 fluid={true}
                 rounded={true}
+                className='bg-pink-200'
             >
                 <Navbar.Brand href="/">
                     <img
@@ -24,7 +25,7 @@ const Header = () => {
                         className="mr-3 h-6 sm:h-9"
                         alt="Cake n Cake logo"
                     />
-                    <span className="self-center whitespace-nowrap text-3xl font-semibold dark:text-white">
+                    <span className="self-center whitespace-nowrap text-5xl font-semibold dark:text-white">
                         Bake n Cake
                     </span>
                 </Navbar.Brand>
@@ -36,32 +37,35 @@ const Header = () => {
                         user?.uid ?
                             <>
                                 <Navbar.Collapse className=' mt-3 mr-5 pr-5'>
-                                    <Navbar.Link href="/myReviews" className='flex justify-start items-center'>
+                                    <Navbar.Link href="/myReviews" className='flex justify-start items-center font-semibold text-lg'>
                                         My Reviews
                                     </Navbar.Link>
-                                    <Navbar.Link href="/addService">
+                                    <Navbar.Link href="/addService" className='font-semibold text-lg'>
                                         Add Service
                                     </Navbar.Link></Navbar.Collapse>
 
-                                <Button onClick={handleLogOut}>Log Out</Button>
+                                <Button gradientMonochrome="cyan" onClick={handleLogOut}>Log Out</Button>
                             </>
                             :
                             <>
-                                <Link to={'/login'} className='me-2 p-2 py-2 px-4 rounded-3 bg-light border fw-bold'>Login</Link>
-                                <Link to={'/signup'} className='me-2 p-2 py-2 px-4 rounded-3 bg-red-700 text-white fw-bold'>Sign Up</Link>
+                                <Button href='/login' gradientMonochrome="cyan" className='mr-3 p-2 px-2 rounded-3 '>Login</Button>
+                                <Button href='/signup' gradientMonochrome="teal" className='p-2 mr-3 px-2 rounded-3 '>Sign Up</Button>
                             </>
                     }
                     <Navbar.Toggle />
                 </div>
                 <Navbar.Collapse>
                     <Navbar.Link
+                        className='font-semibold text-lg'
                         href="/">
                         Home
                     </Navbar.Link>
-                    <Navbar.Link href="/services">
-                        Our Services
+                    <Navbar.Link className='font-semibold text-lg'
+                        href="/services">
+                        My Services
                     </Navbar.Link>
-                    <Navbar.Link href="/blog">
+                    <Navbar.Link className='font-semibold text-lg'
+                        href="/blog">
                         Blog
                     </Navbar.Link>
 

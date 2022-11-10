@@ -3,7 +3,7 @@ import React from 'react';
 
 const Blog = () => {
     return (
-        <div className='border my-8 rounded-md p-3 w-1/2 mx-auto p-4'>
+        <div className='border my-8 rounded-md p-3 w-1/2 mx-auto p-5 border'>
             <Accordion>
                 <Accordion.Panel>
                     <Accordion.Title className='p-3 rounded-lg mb-3 p-9'>
