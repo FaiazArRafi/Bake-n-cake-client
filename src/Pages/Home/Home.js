@@ -1,4 +1,4 @@
-import { Carousel } from 'flowbite-react';
+import { Button, Carousel } from 'flowbite-react';
 import React, { useEffect, useState } from 'react';
 import AllServices from '../Services/AllServices';
 import Services from '../Services/Services';
@@ -40,13 +40,16 @@ const Home = () => {
                     </Carousel>
                 </div>
             </div>
-            <div className='mx-auto'>
+            <div className='mx-auto my-5'>
                 {
                     services && services.slice(0, 3).map(service => <AllServices
                         key={service._id}
                         service={service}
                     ></AllServices>)
                 }
+                <div className='mx-auto '>
+                    <Button href={`/services`} className='mx-auto mb-5 w-1/4 text-2xl' gradientDuoTone="greenToBlue" ><span className='text-2xl'>See All</span></Button>
+                </div>
             </div>
         </div>
     );

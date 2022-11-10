@@ -1,5 +1,6 @@
 import { Button, Card } from 'flowbite-react';
 import React from 'react';
+import { PhotoProvider, PhotoView } from 'react-photo-view'
 
 
 const AllServices = ({ service }) => {
@@ -10,7 +11,11 @@ const AllServices = ({ service }) => {
             <div className="mx-auto my-5">
                 <Card className='mx-auto my-5'
                     horizontal={true}>
-                    <img src={image_url} alt="" />
+                    <PhotoProvider>
+                        <PhotoView src={image_url}>
+                            <img src={image_url} alt="" />
+                        </PhotoView>
+                    </PhotoProvider>
                     <h5 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
                         {title}
                     </h5>
