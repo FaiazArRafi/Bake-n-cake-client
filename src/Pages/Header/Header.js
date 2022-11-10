@@ -47,8 +47,8 @@ const Header = () => {
                             </>
                             :
                             <>
-                                <Link to={'/login'} className='me-2 p-2 py-2 px-4 rounded-3 bg-light border fw-bold' style={{ textDecoration: 'none' }}>Login</Link>
-                                <Link to={'/signup'} className='me-2 p-2 py-2 px-4 rounded-3 bg-red-700 text-white fw-bold' style={{ textDecoration: 'none' }}>Sign Up</Link>
+                                <Link to={'/login'} className='me-2 p-2 py-2 px-4 rounded-3 bg-light border fw-bold'>Login</Link>
+                                <Link to={'/signup'} className='me-2 p-2 py-2 px-4 rounded-3 bg-red-700 text-white fw-bold'>Sign Up</Link>
                             </>
                     }
                     <Navbar.Toggle />
