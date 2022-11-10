@@ -37,7 +37,7 @@ const SignUp = () => {
                     <div className="mb-2 block">
                         <Label
                             htmlFor="name1"
-                            value="Your name"
+                            value="userr name"
                         />
                     </div>
                     <TextInput
@@ -52,7 +52,7 @@ const SignUp = () => {
                     <div className="mb-2 block">
                         <Label
                             htmlFor="photoUrl1"
-                            value="Your photo url"
+                            value="userr photo url"
                         />
                     </div>
                     <TextInput
@@ -66,7 +66,7 @@ const SignUp = () => {
                     <div className="mb-2 block">
                         <Label
                             htmlFor="email1"
-                            value="Your email"
+                            value="userr email"
                         />
                     </div>
                     <TextInput
@@ -81,7 +81,7 @@ const SignUp = () => {
                     <div className="mb-2 block">
                         <Label
                             htmlFor="password1"
-                            value="Your password"
+                            value="userr password"
                         />
                     </div>
                     <TextInput

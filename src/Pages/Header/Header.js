@@ -35,10 +35,10 @@ const Header = () => {
                             <>
                                 <Navbar.Collapse className='mt-1.5 mr-5 pr-5'>
                                     <Navbar.Link href="/myReviews" className='flex justify-start items-center font-semibold text-lg'>
-                                        <span className='text-white'>My Reviews</span>
+                                        <span >My Reviews</span>
                                     </Navbar.Link>
                                     <Navbar.Link href="/addService" className='font-semibold text-lg'>
-                                        <span className='text-white'>Add Service</span>
+                                        <span >Add Service</span>
                                     </Navbar.Link></Navbar.Collapse>
 
                                 <Button gradientDuoTone="purpleToPink" onClick={handleLogOut}>Log Out</Button>
@@ -55,15 +55,15 @@ const Header = () => {
                     <Navbar.Link
                         className='font-semibold text-lg '
                         href="/">
-                        <span className='text-white'>Home</span>
+                        <span >Home</span>
                     </Navbar.Link>
                     <Navbar.Link className='font-semibold text-lg'
                         href="/services">
-                        <span className='text-white'>My Services</span>
+                        <span >My Services</span>
                     </Navbar.Link>
                     <Navbar.Link className='font-semibold text-lg'
                         href="/blog">
-                        <span className='text-white'>Blog</span>
+                        <span >Blog</span>
                     </Navbar.Link>
 
                 </Navbar.Collapse>

@@ -1,9 +1,9 @@
-// Import the functions you need from the SDKs you need
+// Import the functions user need from the SDKs user need
 import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
+// TODO: Add SDKs for Firebase products that user want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
+// userr web app's Firebase configuration
 const firebaseConfig = {
     apiKey: process.env.REACT_APP_apiKey,
     authDomain: process.env.REACT_APP_authDomain,

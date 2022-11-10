@@ -82,7 +82,7 @@ const PostReviews = () => {
                         <div className="mb-2">
                             <Label
                                 htmlFor="small"
-                                value="Your Picture"
+                                value="userr Picture"
                             />
                         </div>
                         <TextInput
@@ -100,7 +100,7 @@ const PostReviews = () => {
                         <div className="mb-2 block">
                             <Label
                                 htmlFor="email2"
-                                value="Your email"
+                                value="userr email"
                             />
                         </div>
                         <TextInput
@@ -118,7 +118,7 @@ const PostReviews = () => {
                         <div className="mb-2">
                             <Label
                                 htmlFor="small"
-                                value="Your Name"
+                                value="userr Name"
                             />
                         </div>
                         <TextInput
@@ -134,7 +134,7 @@ const PostReviews = () => {
                         <div className="mb-2 block">
                             <Label
                                 htmlFor="comment"
-                                value="Your message"
+                                value="userr message"
                             />
                         </div>
                         <Textarea
