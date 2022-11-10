@@ -6,7 +6,6 @@ import { AuthContext } from '../../Context/AuthProvider';
 const Header = () => {
 
     const { user, logOut } = useContext(AuthContext);
-    console.log(user)
     const handleLogOut = () => {
         logOut()
             .then(() => { })
@@ -48,8 +47,7 @@ const Header = () => {
                 </div>
                 <Navbar.Collapse>
                     <Navbar.Link
-                        href="/"
-                    >
+                        href="/">
                         Home
                     </Navbar.Link>
                     <Navbar.Link href="/services">
@@ -57,6 +55,12 @@ const Header = () => {
                     </Navbar.Link>
                     <Navbar.Link href="/blog">
                         Blog
+                    </Navbar.Link>
+                    <Navbar.Link href="/myReviews">
+                        My Review
+                    </Navbar.Link>
+                    <Navbar.Link href="/addService">
+                        Add Service
                     </Navbar.Link>
                 </Navbar.Collapse>
             </Navbar>

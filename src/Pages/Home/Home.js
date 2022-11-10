@@ -1,8 +1,16 @@
 import { Carousel } from 'flowbite-react';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import AllServices from '../Services/AllServices';
+import Services from '../Services/Services';
 
 const Home = () => {
+    const [services, setServices] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:5000/services')
+            .then(res => res.json())
+            .then(data => setServices(data))
+    }, [])
     return (
         <div className='container mx-auto'>
             <h1>Home is this</h1>
@@ -32,8 +40,14 @@ const Home = () => {
                     </Carousel>
                 </div>
             </div>
-
-
+            <div className='mx-auto'>
+                {
+                    services && services.slice(0, 3).map(service => <AllServices
+                        key={service._id}
+                        service={service}
+                    ></AllServices>)
+                }
+            </div>
         </div>
     );
 };

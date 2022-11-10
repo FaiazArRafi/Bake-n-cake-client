@@ -4,7 +4,6 @@ import React from 'react';
 
 const AllServices = ({ service }) => {
     const { title, image_url, details, price, _id } = service;
-    console.log(service);
 
     return (
         <div>

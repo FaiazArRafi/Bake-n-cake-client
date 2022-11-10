@@ -1,6 +1,7 @@
 import { Card } from 'flowbite-react';
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import PostReviews from '../Reviews/PostReviews';
 import Reviews from '../Reviews/Reviews';
 
 const Details = () => {
@@ -23,6 +24,7 @@ const Details = () => {
                 </Card>
             </div>
             <Reviews></Reviews>
+            <PostReviews></PostReviews>
         </div>
     );
 };
