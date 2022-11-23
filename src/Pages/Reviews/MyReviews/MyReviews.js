@@ -14,7 +14,7 @@ const MyReviews = () => {
     }, [user?.email])
 
     const handleDelete = id => {
-        const proceed = window.confirm('Are user sure, user want to delete this review ?');
+        const proceed = window.confirm('Are you sure, you want to delete this review ?');
         if (proceed) {
             fetch(`https://bake-server.vercel.app/reviews/${id}`, {
                 method: 'DELETE'
